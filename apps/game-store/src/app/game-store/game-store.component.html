@@ -1,0 +1,11 @@
+<div class="game-containers">
+
+    <div class="game-list">
+        <thirty-game-store-list [games]="game$ | async" (selected)="selectGame($event)" (deleted)="deleteGame($event)">
+        </thirty-game-store-list>
+    </div>
+    <div class="game-info">
+        <thirty-game-store-info [gameForm]="gameForm" (saved)="saveGame()" (cancelled)="resetForm()"> 
+        </thirty-game-store-info>
+    </div>
+</div>
